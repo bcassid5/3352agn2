@@ -1,0 +1,15 @@
+<h1 align="center">Search Records</h1>
+<h3>Enter a student number to search for a student:</h3>
+
+<div class="ui form">
+    <div class="field">
+        <label>Student Number</label>
+      {{input type='number' placeholder='enter student number' value=searchNumber}}
+
+    </div>
+    <button class="ui fluid button" {{action 'search' searchNumber}}>Search Records</button>
+</div>
+{{#if isFound}}
+    <h4 align="center">{{#link-to 'post' searchResult}}{{searchNumber}} Found! Click to view Record{{/link-to}}</h4>
+{{/if}}
+

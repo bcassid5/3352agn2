@@ -1,0 +1,55 @@
+<div class="ui grid">
+    <div class="three wide column">
+        <div class="ui vertical labeled icon buttons">
+            <button class="ui button" {{action 'save' selectedModel.id}}><i class="save icon"></i>Save</button>
+            <button class="ui button" {{action 'undo'}}><i class="undo icon"></i>Undo</button>
+            <button class="ui button"><i class="step backward icon"></i>{{#link-to 'post' '5845f7d0acc656a633be0aa4'}}First Record{{/link-to}}</button>
+            <button class="ui button"><i class="left chevron icon"></i>Previous Record</button>
+            <button class="ui button">{{#link-to 'post' selectedModel.id}}Next Record{{/link-to}}<i class="right chevron icon"></i></button>
+            <button class="ui button">{{#link-to 'post' '5845f7d0acc656a633be0b07'}}Last Record{{/link-to}}<i class="step forward icon"></i></button>
+        </div>
+    </div>
+    <div class="nine wide column">
+        <div class="ui form">
+            <div class="field">
+                <label>Student Number</label>
+
+              {{input type="number" value=selectedModel.number}}
+            </div>
+            <div class="field">
+                <label>First Name</label>
+              {{input type="text" value=selectedModel.firstName}}
+            </div>
+            <div class="field">
+                <label>Last Name</label>
+              {{input type="text" value=selectedModel.lastName}}
+            </div>
+            <div class="field">
+                <label>Date of Birth</label>
+              {{input type="text" value=selectedModel.DOB}}
+            </div>
+            <div class="field">
+                <label>Residency</label>
+                <select class="ui dropdown" onchange={{action 'resOption' value='target.value'}} value={{selectedModel.residency}}>
+
+                    <option value="1">Canadian/Native</option>
+                    <option value="2">Permanent</option>
+                    <option value="3">International</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Gender</label>
+                <select class="ui dropdown" onchange={{action 'genOption' value='target.value'}} value={{selectedModel.gender}}>
+
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+    <div class="four wide column">
+        <img class="ui centered medium image" src="/assets/images/{{selectedModel.gender}}.png">
+    </div>
+</div>
+

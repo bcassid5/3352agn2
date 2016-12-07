@@ -1,0 +1,38 @@
+<div class="ui segment container">
+    <img class="ui medium centered  image" src="/assets/images/logo.png">
+
+    <h1 align="center">Student Records</h1>
+
+    <div class="ui labelled borderless three item icon menu">
+
+
+        <a class="item">
+            <i class="content icon"></i>
+          {{#link-to 'posts'}}All Records{{/link-to}}
+        </a>
+        <a class="item">
+            <i class="search icon"></i>
+          {{#link-to 'find'}}Find Record{{/link-to}}
+        </a>
+        <a class="item">
+            <i class="help icon"></i>
+          {{#link-to 'help'}}Help{{/link-to}}
+
+        </a>
+
+    </div>
+
+  {{outlet}}
+
+    <footer>
+        <div class="ui inverted grid segment">
+            <div class="thirteen wide column">
+                © Copyright - Semicolon Software Solutions 2016
+            </div>
+            <div class="three wide column">
+                <img class="ui right aligned container tiny image" src="/assets/images/footer_logo.png">
+            </div>
+        </div>
+    </footer>
+
+</div>

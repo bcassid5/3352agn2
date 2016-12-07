@@ -1,0 +1,15 @@
+<h1 align="center">All Records</h1>
+<h3>Select a record to view the student:</h3>
+
+<div class="ui bulleted list">
+    <br>
+  {{#each model as |onePost|}}
+      <div class="item">
+          <div class="ui grid">
+              <div class="ten wide column">
+                  <li>{{#link-to 'post' onePost.id}}{{onePost.number}} - {{onePost.lastName}}, {{onePost.firstName}}{{/link-to}}</li>
+              </div>
+          </div>
+      </div>
+  {{/each}}
+</div>
