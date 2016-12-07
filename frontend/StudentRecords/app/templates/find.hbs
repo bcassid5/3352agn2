@@ -1,1 +1,14 @@
 {{search-records}}
+
+<div class="ui bulleted list">
+    <br>
+  {{#each model as |onePost|}}
+      <div class="item">
+          <div class="ui grid">
+              <div class="ten wide column">
+                  <li>{{onePost.number}}</li>
+              </div>
+          </div>
+      </div>
+  {{/each}}
+</div>

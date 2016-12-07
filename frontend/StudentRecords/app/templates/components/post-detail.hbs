@@ -3,11 +3,14 @@
         <div class="ui vertical labeled icon buttons">
             <button class="ui button" {{action 'save' selectedModel.id}}><i class="save icon"></i>Save</button>
             <button class="ui button" {{action 'undo'}}><i class="undo icon"></i>Undo</button>
-            <button class="ui button"><i class="step backward icon"></i>{{#link-to 'post' '5845f7d0acc656a633be0aa4'}}First Record{{/link-to}}</button>
-            <button class="ui button"><i class="left chevron icon"></i>Previous Record</button>
-            <button class="ui button">{{#link-to 'post' selectedModel.id}}Next Record{{/link-to}}<i class="right chevron icon"></i></button>
-            <button class="ui button">{{#link-to 'post' '5845f7d0acc656a633be0b07'}}Last Record{{/link-to}}<i class="step forward icon"></i></button>
+            <button class="ui button" {{action 'firstRecord'}}><i class="step backward icon"></i>{{#link-to 'post' firstRecord}}First Record{{/link-to}}</button>
+            <button class="ui button" {{action 'previousRecord'}}><i class="left chevron icon"></i>{{#link-to 'post' prevRecord}}Previous Record{{/link-to}}</button>
+            <button class="ui button" {{action 'nextRecord'}}>{{#link-to 'post' nextRecord}}Next Record{{/link-to}}<i class="right chevron icon"></i></button>
+            <button class="ui button" {{action 'lastRecord'}}>{{#link-to 'post' lastRecord}}Last Record{{/link-to}}<i class="step forward icon"></i></button>
         </div>
+        <p><strong>Note to the Professor/TA:</strong> Some problems occurred when we were implementing the above functions. For each
+        button with blue hyperlinked text, please click on the icon first, and then the text each time. Apologies
+        for the inconvenience, but this will demonstrate our functions properly.</p>
     </div>
     <div class="nine wide column">
         <div class="ui form">
