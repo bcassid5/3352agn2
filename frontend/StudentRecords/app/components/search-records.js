@@ -12,8 +12,8 @@ export default Ember.Component.extend({
 
       var self = this;
 
-
-      myStore.queryRecord('post', num).then(function (post) {
+      alert(num);
+      myStore.find('post', {number: num}).then(function (post) {
         alert(num);
 
 

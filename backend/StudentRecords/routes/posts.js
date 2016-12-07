@@ -22,6 +22,18 @@ router.route('/')
             });
     });
 
+router.route('/')
+    .get(parseUrlencoded, parseJSON, function (request, response) {
+        models.Posts.findOne(request.params.post_number, function (error, post) {
+            if (error) {
+                response.send({error: error});
+            }
+            else {
+                response.json({post: post});
+            }
+        });
+    });
+
 router.route('/:post_id')
     .get(parseUrlencoded, parseJSON, function (request, response) {
         models.Posts.findById(request.params.post_id, function (error, post) {
